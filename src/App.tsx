@@ -1,3 +1,4 @@
+// src/App.tsx
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "@/components/Layout";
 import Home from "@/pages/Home";
@@ -14,14 +15,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-
-          {/* Agar URL /projects rakhna hai */}
           <Route path="/projects" element={<Projects />} />
-
-          {/* Agar URL /services rakhna hai to upar wali line ki jagah ye use karo:
-          <Route path="/services" element={<Projects />} />
-          */}
-
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Layout>
