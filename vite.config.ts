@@ -1,4 +1,4 @@
-// vite.config.js
+// vite.config.ts
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import tailwindcss from '@tailwindcss/vite'
@@ -10,17 +10,13 @@ export default defineConfig({
     tailwindcss(),
   ],
 
-  // 🔴 IMPORTANT: yahan apne GitHub repo ka exact naam
-  // tumhare case me folder/repo "luxeestate" hai:
-  base: '/luxeestate/',
+  // 🔴 yahi sabse important line:
+  // GitHub repo ka naam: luxe3dwebsite
+  base: '/luxe3dwebsite/',
 
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
-  },
-
-  build: {
-    outDir: 'dist', // default bhi 'dist' hi hota hai, bas clarity ke liye
   },
 })
