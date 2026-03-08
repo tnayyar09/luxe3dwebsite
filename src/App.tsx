@@ -2,9 +2,8 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "@/components/Layout";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
-import Services from "@/pages/Services";
 import Contact from "@/pages/Contact";
-import BookAppointment from "@/pages/BookAppointment";
+import Projects from "@/pages/Projects";
 import { ScrollToTop } from "@/components/ScrollToTop";
 
 export default function App() {
@@ -15,9 +14,15 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
+
+          {/* Agar URL /projects rakhna hai */}
+          <Route path="/projects" element={<Projects />} />
+
+          {/* Agar URL /services rakhna hai to upar wali line ki jagah ye use karo:
+          <Route path="/services" element={<Projects />} />
+          */}
+
           <Route path="/contact" element={<Contact />} />
-          <Route path="/book-appointment" element={<BookAppointment />} />
         </Routes>
       </Layout>
     </Router>
